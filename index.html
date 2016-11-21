@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script>
+	  
+		var str = '';
+		var abc = [
+					{"im":"https://blzgdapipro-a.akamaihd.net/media/thumbnail/genji-screenshot-003.jpg", "tl":"Genji", "con":"attack", "lnk":"https://playoverwatch.com/zh-tw/heroes/genji/"},
+					{"im":"https://blzgdapipro-a.akamaihd.net/media/wallpaper/mercy-theatrical-wide.jpg", "tl":"Mercy", "con":"support", "lnk":"https://playoverwatch.com/zh-tw/heroes/mercy/"},
+					{"im":"http://mtgamer.com/wp-content/uploads/2016/07/DVa_014-1024x573.jpg", "tl":"Dva", "con":"tank", "lnk":"https://playoverwatch.com/zh-tw/heroes/dva/"}
+				  ];
+		function f()
+		{
+			
+			
+			for(i = 0;i<abc.length;i++)
+			{
+				str += 	'<li class="collection-item avatar"><img src="'+abc[i].im+ '"alt="" class="circle">\
+				<span class="title">'+abc[i].tl+'</span>'+'<p>'+abc[i].con+'</p>\
+				<a href="'+abc[i].lnk+'" class="secondary-content"><i class="material-icons">grade</i></a></li>';
+			}
+			document.getElementById("aaa").innerHTML = str;
+			
+		}
+	  </script>
+    </head>
+
+    <body onload="f()">
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  
+	  
+	  
+	  <ul class="collection" id="aaa">			
+	  </ul>
+	  
+	  
+	  
+	  
+    </body>
+	
+  </html>
